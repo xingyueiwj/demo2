@@ -222,6 +222,11 @@ public class DatabaseHelper {
     private static String getTableName(Class<?>entityClass){
         return entityClass.getSimpleName();
     }
+
+    /**
+     * 执行sql文件
+     * @param filePath
+     */
     public static void excuteSqlFile(String filePath){
         InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream(filePath);
         BufferedReader reader = new BufferedReader(new InputStreamReader(is));
